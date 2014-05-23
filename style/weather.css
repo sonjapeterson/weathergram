@@ -1,0 +1,328 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.slide {
+	text-decoration: none;
+	cursor: s-resize;
+}
+
+.slide {
+	display: -webkit-box;   /* OLD: Safari,  iOS, Android browser, older WebKit browsers.  */
+	display: -moz-box;      /* OLD: Firefox (buggy) */ 
+	display: -ms-flexbox;   /* MID: IE 10 */
+	display: -webkit-flex;  /* NEW, Chrome 21–28, Safari 6.1+ */
+	display: flex;          /* NEW: IE11, Chrome 29+, Opera 12.1+, Firefox 22+ */
+
+	-webkit-box-align: center; -moz-box-align: center; /* OLD… */
+	-ms-flex-align: center; /* You know the drill now… */
+	-webkit-align-items: center;
+	align-items: center;
+
+	-webkit-box-pack: center; -moz-box-pack: center; 
+	-ms-flex-pack: center; 
+	-webkit-justify-content: center;
+	justify-content: center;
+
+	margin: 0;
+	height: 100%;
+	width: 100% /* needed for Firefox */
+
+}
+
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.black-bg {
+	background: #1c5380;
+	color: #e0e1e2;
+}
+/*
+.black-bg a {
+	color: #e0e1e2;
+	background:url(http://nonstopnews.org/images/moving-underline-white.gif) repeat-x;
+	background-position:0 100%;
+}*/
+
+.white-bg {
+	background: #e0e1e2;
+	color: #0E2940;
+}
+
+/*.white-bg a {
+	color: #000000;
+	background:url(http://nonstopnews.org/images/moving-underline.gif) repeat-x;
+	background-position:0 100%;
+}*/
+
+.blue-bg {
+	background: #1c5380;
+}
+
+.blue-bg h1 {
+	color: white;
+}
+
+.selfieback {
+	color: #0E2940;
+	background: #e0e1e2 url(selfiecolumn2.png) no-repeat;
+	background-size: auto 100%;
+
+}
+
+.foodback {
+	color: #0E2940;
+	background: #e0e1e2 url(foodcolumn.png) no-repeat right;
+	background-size: auto 100%;
+}
+
+.hashtagback {
+	color: #000000;
+	background: #e0e1e2 url(hashtagback.png) repeat;
+}
+
+.slide-content, .third {
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	text-align: center;
+	-webkit-box-align: center; -moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	
+}
+
+.slide-content-column {
+	display: -webkit-box; 
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+    -webkit-flex-flow: column;
+    -ms-flex-flow: column;
+    -moz-flex-flow: column;
+    text-align: center;
+	-webkit-box-align: center; -moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	max-height: 80%;
+}
+
+h1, h2, .third {
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	display: block;
+}
+
+h1 {
+	font-size: 5em;
+	max-width: 13em;
+	font-weight: normal;
+}
+
+.display {
+	font-family: 'Lobster Two', cursive;
+	font-size: 8em;
+}
+
+h2 {
+	font-size: 3.5em;
+	max-width: 14em;
+	font-weight: normal;
+}
+
+h1 .location, h1 .forecast {
+	font-style: italic;
+}
+
+.displaysmaller {
+	font-family: 'Lobster Two', cursive;
+	padding: 5px;
+	font-size: 130px;
+	max-width: 13em;
+}
+
+.third {
+	font-size: 2.25em;
+	font-weight: normal;
+	width: 33%;
+	display: inline-block;
+}
+
+.city {
+	font-family: 'Lobster Two', sans-serif;
+	color: #1c5380;
+	font-size: 4em;
+}
+
+.city:hover {
+	color: #0E2940;
+}
+
+/* Media Queries */
+		
+@media screen and (max-width: 420px) {
+
+	.slide-content {
+		padding: 0 20px;
+		line-height: 1;
+	}
+
+	h1 {
+		font-size: 3em;
+		max-width: 100%;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		max-width: 100%;
+	}
+
+	.third {
+		font-size: 0.75em;
+	}
+	
+}
+
+/* EXAMPLE 2 */
+/* These are CSS classes that give a background color to the last slide depending on the weather condition. */
+
+/*.c-tornado { background: #fa0064; }
+.c-tropical-storm { background: #fa4a5a; }
+.c-hurricane { background: #db6b94; }
+.c-severe-thunderstorms { background: #f261c2; }
+.c-thunderstorms { background: #fc91d2; }
+.c-mixed-rain-and-snow { background: #f9a2f9; }
+.c-mixed-rain-and-sleet { background: #f4bed7; }
+.c-mixed-snow-and-sleet { background: #eeeeee;}
+.c-freezing-drizzle { background: #e7a3a0; }
+.c-drizzle { background: #f48395; }
+.c-freezing-rain { background: #dc5917; }
+.c-showers-1 { background: #5187ed; }
+.c-showers-2 { background: #0000ff; }
+.c-snow-flurries { background: #f7a653; }
+.c-light-snow-showers { background: #d9ac28; }
+.c-blowing-snow { background: #fdd028; }
+.c-snow { background: #e5dc37; }
+.c-hail { background: #feef2d; }
+.c-sleet { background: #fdfc59; }
+.c-dust { background: #b6d825; }
+.c-foggy { background: #90c541; }
+.c-haze { background: #1b9713; }
+.c-smoky { background: #cccccc; }
+.c-blustery { background: #1a8e7a; }
+.c-windy { background: #29ad6a; }
+.c-cold { background: #38f4a5; }
+.c-cloudy { background: #7aced8; }
+.c-mostly-cloudy-night { background: #28bafd; }
+.c-mostly-cloudy-day { background: #28bafd; }
+.c-partly-cloudy-night { background: #5187ed; }
+.c-partly-cloudy-day { background: #5187ed; }
+.c-clear-night { background: #617d9d; }
+.c-sunny .weather-condition-special-text { /*background: #9974d9 url(sunback.jpg);*/ }
+.c-fair-night { background: #a91fc9; }
+.c-fair-day .weather-condition-special-text { 
+	/*background: #9974d9 url(sunback.jpg) no-repeat; background-size: 100% 100%; 
+	-webkit-transition: background-image 0.2s ease-in-out;
+	-moz-transition: background-image 0.2s ease-in-out;
+	-ms-transition: background-image 0.2s ease-in-out;
+	-o-transition: background-image 0.2s ease-in-out;
+	transition: background-image 0.2s ease-in-out;*/
+}
+.c-fair-day .weather-condition-special-text:hover { 
+	/*background: #9974d9 url(sunbacklighter.png) no-repeat; 
+	background-size: 100% 100%;
+	color: yellow;*/
+}
+.c-mixed-rain-and-hail { background: #d74dda; }
+.c-hot { background: #fa0064; }
+.c-isolated-thunderstorms { background: #fa4a5a; }
+.c-scattered-thunderstorms-1 { background: #db6b94; }
+.c-scattered-thunderstorms-2 { background: #db6b94; }
+.c-scattered-showers { background: #f261c2; }
+.c-heavy-snow { background: #fc91d2; }
+.c-scattered-snow-showers { background: #f9a2f9; }
+.c-heavy-snow { background: #f4bed7; }
+.c-partly-cloudy { background: #e7a3a0; }
+.c-thundershowers { background: #f48395; }
+.c-snow-showers { background: #dc5917; }
+.c-isolated-thundershowers { background: #ef882d; }
+.c-not-available { background: #cccccc; }*/
+
+/* EXAMPLE 3 */
+/* Style your special text here. */
+
+.city-label {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	background: lime;
+}
+
+.weather-condition-special-text {
+	font-family: 'Lobster Two', cursive;
+	display: block;
+	font-size: 200px;
+	margin: 30px 0px;
+
+	/*
+	border: 2px solid white;
+	padding: 2.5em 2em;
+	color: white;
+		-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-ms-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;*/
+}
+
+.weather-condition-special-text a:hover {
+	color: white;
+	border: 10px dotted white;
+}
+
+.weather-condition-special-text a {
+	color: #E6E68A;
+	border: 10px dotted #E6e68a;
+	padding: 10px;
+}
+
+.weather-condition-name-text {
+	text-transform: lowercase;
+}
+
+
+/* EXAMPLE 4 */
+/* Tester. To style how the "TESTING: PARTLY CLOUDY" looks, do that here. */
+
+.print-weather-condition {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	visibility: hidden;
+	background: yellow;
+}

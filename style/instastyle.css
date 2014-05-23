@@ -1,0 +1,212 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: 'Lato', Helvetica;
+	background-color: #e0e1e2; 
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	color: #1c5380;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#rightcontainer {
+	position: fixed;
+	width: 30%;
+	height: 100%;
+	right: 10px;
+	top: 10px;
+	text-align: center;
+	display: table;
+}
+
+#weather {
+	display:table-cell; 
+	vertical-align:middle;
+}
+
+#leftcontainer {
+	text-align: center;
+	/*padding: .3em;*/
+	
+}
+
+#instafeed {
+	width: 70%;
+}
+
+.button {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0em;
+	background-color: #1c5380;
+	text-decoration: none;
+	font-family: 'Lobster Two', sans-serif;
+	padding: .25em .25em 0em .25em;
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+	cursor: pointer;
+	 -webkit-transition: background-color 2s ease;
+	-moz-transition: background-color 1s ease;
+	-o-transition: background-color 1s ease;
+	-ms-transition: obackground-color 1s ease;
+	transition: background-color 1s ease;
+
+}
+
+.button:hover {
+	background-color: #0E2940;
+}
+
+
+#instafeed a {
+  display:inline-block;
+  padding:5px 5px 1px 5px;
+  margin:10px;
+  border:1px solid white;
+  display:inline-block;
+  border-radius: 4px;
+  position:relative;
+  overflow: hidden;
+}
+
+#instafeed img {
+	height: 160px;
+	width: 160px;
+}
+
+.tags {
+  background: rgba(28, 83, 128, 0.8);
+  font-family:sans-serif;
+  font-size:1em;
+  position:absolute;
+  color:#ffffff;
+  right:0px;
+  top:0px;
+  left:0px;
+  opacity:0;
+  width: 130px;
+  height: 130px;
+  text-align: left;
+  padding: 5px;
+  overflow: hidden;
+  -webkit-font-smoothing:antialiased;
+/*  -webkit-transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-o-transition: opacity .25s ease-in-out;
+	-ms-transition: opacity .25s ease-in-out;
+	transition: opacity .25s ease-in-out;*/
+}
+
+#instafeed a:hover .tags {
+  opacity:1;
+  width: 160px;
+  height: 160px;
+}
+
+.temp {
+	font-size: 8em;
+	font-family: 'Lobster Two', sans-serif;
+}
+
+.city, .wind {
+	font-size: 2.5em;
+}
+
+.currently {
+	font-size: 6em;
+	font-family: 'Lobster Two', sans-serif;
+}
+
+@media screen and (max-width: 1224px) {
+	body {
+		font-size: 12px; 
+	}
+
+	#rightcontainer {
+		width: 25%;
+	}
+
+	#instafeed {
+		width: 75%;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	body {
+		font-size: 11px; 
+	}
+
+	#instafeed img {
+	height: 100px;
+	width: 100px;
+}
+
+.tags {
+  width: 70px;
+  height: 70px;
+}
+
+#instafeed a:hover .tags {
+  width: 100px;
+  height: 100px;
+}
+}
+
+@media screen and (max-width: 400px) {
+	#rightcontainer {
+		display: block;
+		position: static;
+		width: 90%;
+		margin: 10px auto;
+	}
+
+	#instafeed {
+		width: 100%;
+	}
+
+	#instafeed a {
+		margin: 2px;
+	}
+
+	#instafeed img {
+	height: 90px;
+	width: 90px;
+}
+
+.tags {
+  width: 60px;
+  height: 60px;
+}
+
+#instafeed a:hover .tags {
+  width: 90px;
+  height: 90px;
+}
+
+.button {
+	display: none;
+}
